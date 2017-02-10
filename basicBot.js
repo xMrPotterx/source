@@ -278,7 +278,7 @@
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: false,
+            thorCommand: true,
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
@@ -382,7 +382,7 @@
                     var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
-                    API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
+                    API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: 2}));
                     setTimeout(function (winner, pos) {
                         basicBot.userUtilities.moveUser(winner, pos, false);
                     }, 1 * 1000, winner, pos);
@@ -2957,7 +2957,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: 'feitiço',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -3280,7 +3280,7 @@
             },
 
             thorCommand: {
-              command: 'thor',
+              command: 'felixfelicis',
               rank: 'user',
               type: 'exact',
               functionality: function (chat, cmd) {
